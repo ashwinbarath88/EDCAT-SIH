@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: ecdat-sih
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend app:app
